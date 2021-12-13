@@ -24,6 +24,8 @@ def main():
         st.dataframe(df.sort_values('petal_length', ascending=False))
 
 
+## 새로고침 할때마다 실행된다.
 
 if __name__ == '__main__' :
+    #print(__name__)
     main()
