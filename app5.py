@@ -1,14 +1,27 @@
-# 위의 라이브러리는 설치치했으므로, 임포트만 하면 된다
 import streamlit as st
+import pandas as pd
+# 이미지 처리를 위한 라이브러리
+from PIL import Image
 
-# 웹 대시보드 개발 라이브버리인 스트림릿은 main 함수가 있어야한다.
-def main() :
-    st.title('Hello Streamlit. 웹 대시보드')
-    st.title('헬로우')
+def main():
+    ## 넘파이이다.
+    img =Image.open('data/image_03.jpg')
+    print(img)
+    st.image(img)
+    
+    st.image(img, use_column_width= True)
+    #웹상의 이미지를 띄우겠다
+    st.image('http://www.outdoornews.co.kr/news/photo/202009/32077_90504_551.jpg')
+    
+    # 동영상도 플레이 시킬 수 있다.
+    # open은 파이썬의 함수이다. rb는 읽기아 바이너리로 열어라
+    video_file = open('data/Lake_video.mp4', 'rb')
+    st.video(video_file)
 
-    st.header('이 영역은 헤더 영역')
+    # 오디오파일은 아래와같이 플레이 할 수 있다.
+    # audio_file = open('data/song.mp3', 'rb')
+    # st.audio(audio_file.read(), format = 'audio/mp3')
+    
 
-    st.success('성공했을 때의 메세지 영역')
-
-if __name__=='__main__':
+if __name__ == '__main__' :
     main()
