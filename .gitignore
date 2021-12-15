@@ -1,3 +1,6 @@
+# 무시할파일을 여기에 올려주자/ 깃허브에 올리지않을 파일들
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
